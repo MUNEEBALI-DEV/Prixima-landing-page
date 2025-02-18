@@ -12,7 +12,94 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Contact Model -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row d-flex flex-column flex-lg-row flex-nowrap">
+
+              <div class="col-lg-5 col-12  p-0 contact-img">
+                <img
+                  style="height: 100%; width: 100%"
+                  src="assets/images/c2.jpg"
+                  alt=""  
+                />
+              </div>
+
+              <div class="col-lg-7 col-12 px-4  my-auto color">
+                <h2>Get in touch</h2>
+                <p class="contact-text fw-normal my-3">
+                  Fell free to contact us and we will get back to you as soon as
+                  possible
+                </p>
+
+                <div class="row contact-text ">
+                  <form action="">
+                    <div class="contact-footer d-flex ">
+                      <div class="col-6 d-flex flex-column">
+                        <label for="firstName">First name</label>
+                        <input
+                          class="my-3 me-3"
+                          id="firstName"
+                          type="text"
+                          placeholder="Jon"
+                        />
+                      </div>
+
+                      <div class="col-6 d-flex flex-column">
+                        <label for="lastName">Last name</label>
+                        <input
+                          class="my-3"
+                          id="lastName"
+                          type="text"
+                          placeholder="Doe"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column">
+                      <label for="email">Email address</label>
+                      <input
+                        id="email"
+                        type="text"
+                        class="my-3"
+                        placeholder="Johndoe@gmail.com"
+                      />
+                    </div>
+
+                    <div class="col-12 d-flex flex-column">
+                      <label for="contactMessage">Enter Message </label>
+                      <textarea
+                        class="my-3"
+                        name="contactMessage"
+                        id="message"
+                        rows="5"
+                        placeholder="This is looking great and nice"
+                      ></textarea>
+                    </div>
+                    <div class="my-3">
+                      <a class="contact-btn bg-brand text-white ms-lg-2"
+                        >Send Message</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //Contact Model -->
+
     <!-- Top-Navbar -->
     <div class="wrapper bg-brand">
       <!-- This is used to spread background till end  -->
@@ -46,10 +133,10 @@
     <!-- Top-Navbar -->
 
     <!-- Bottom-Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top  py-3 py-lg-0 ">
       <div class="container">
         <h1>
-          <a class="navbar-brand fs-3" href="#"
+          <a class="navbar-brand fs-3" href="#home"
             >Prixima<small class="text-brand">.</small>
           </a>
         </h1>
@@ -68,16 +155,21 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto fw-medium mb-2">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Services</a>
-            <a class="nav-link" href="#">Portfolio</a>
-            <a class="nav-link" href="#">Team</a>
-            <a class="nav-link" href="#">Reviews</a>
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+            <a class="nav-link" href="#team">Team</a>
+            <a class="nav-link" href="#reviews">Reviews</a>
+            <a class="nav-link" href="#blog">Blog</a>
           </div>
 
-          <a href="" class="contact-btn bg-brand text-white ms-lg-2">Contact</a>
+          <a
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            class="contact-btn bg-brand text-white  my-5 my-lg-0 ms-lg-2"
+            >Contact</a
+          >
         </div>
       </div>
     </nav>
@@ -143,7 +235,7 @@
     <!-- Home Section -->
 
     <!-- About -->
-    <section id="about ">
+    <section id="about">
       <div class="container my-5">
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-lg-5">
@@ -566,7 +658,7 @@
     <!-- Team-Member -->
 
     <!-- Reviews-Section -->
-    <section id="reviews  ">
+    <section id="reviews">
       <div id="reviews-cards" class="owl-theme owl-carousel px-lg-5 px-sm-2">
         <div class="review-card">
           <div class="review-overlay"></div>
@@ -676,7 +768,7 @@
 
           <!-- card row -->
           <div class="row g-3 my-5">
-            <div class=" col-md-4">
+            <div class="col-md-4">
               <div
                 class="service-card"
                 style="box-shadow: 0px 6px 30px #0000001a"
@@ -700,14 +792,14 @@
                     <h5 class="py-1">Web Design trends in 2022</h5>
                     <p class="pt-2 pb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical 
+                      random text. It has roots in a piece of classical
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class=" col-md-4">
+            <div class="col-md-4">
               <div
                 class="service-card"
                 style="box-shadow: 0px 6px 30px #0000001a"
@@ -731,13 +823,13 @@
                     <h5 class="py-1">Web Design trends in 2022</h5>
                     <p class="pt-2 pb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical 
+                      random text. It has roots in a piece of classical
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class=" col-md-4">
+            <div class="col-md-4">
               <div
                 class="service-card"
                 style="box-shadow: 0px 6px 30px #0000001a"
@@ -761,7 +853,7 @@
                     <h5 class="py-1">Web Design trends in 2022</h5>
                     <p class="pt-2 pb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical 
+                      random text. It has roots in a piece of classical
                     </p>
                   </div>
                 </div>
@@ -777,9 +869,9 @@
 
     <!-- FOOTER -->
     <section id="footer-div">
-      <div  class="col-lg-6 col-sm-8 pt-5 px-3 mx-auto">
+      <div class="col-lg-6 col-sm-8 pt-5 px-3 mx-auto">
         <div
-          class="d-flex align-items-center justify-content-center flex-column "
+          class="d-flex align-items-center justify-content-center flex-column"
         >
           <h1>
             <a class="navbar-brand text-white fs-3" href="#"
@@ -787,28 +879,25 @@
             </a>
           </h1>
 
-          <p class="footer-para lead z-3 mx-auto text-center ">
+          <p class="footer-para lead z-3 mx-auto text-center">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from
           </p>
 
-          <div
-                  class="d-inline-flex text-white social-icons mt-3 mb-4 "
-                >
-                  <i class="bx bxl-facebook footer-social-icon "></i>
-                  <i class="bx bxl-twitter footer-social-icon "></i>
-                  <i class="bx bxl-instagram footer-social-icon "></i>
-                  <i class="bx bxl-pinterest footer-social-icon "></i>
-                </div>
-
+          <div class="d-inline-flex text-white social-icons mt-3 mb-4">
+            <i class="bx bxl-facebook footer-social-icon"></i>
+            <i class="bx bxl-twitter footer-social-icon"></i>
+            <i class="bx bxl-instagram footer-social-icon"></i>
+            <i class="bx bxl-pinterest footer-social-icon"></i>
+          </div>
         </div>
       </div>
 
-      <p class="footer-para footer-border-top lead z-3 mx-auto text-center py-3
-       "> 
+      <p
+        class="footer-para footer-border-top lead z-3 mx-auto text-center py-3"
+      >
         Copyright@2020. All rights Reserved
       </p>
-
     </section>
     <!-- FOOTER -->
 

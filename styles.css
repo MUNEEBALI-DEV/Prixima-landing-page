@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Helping Classes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Barlow";
 }
@@ -202,12 +207,12 @@ a {
   width: 100%;
 }
 
-.team-card{
+.team-card {
   position: relative;
   transition: all 1s ease-in-out;
 }
 
-.team-overlay{
+.team-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,17 +221,16 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.social-icons-team{
+.social-icons-team {
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
   z-index: -1;
-
-  
 }
-.footer-social-icon,.social-icons-team .social-icon-team{
+.footer-social-icon,
+.social-icons-team .social-icon-team {
   padding: 11px;
   font-size: 1.3rem;
   color: white;
@@ -236,9 +240,9 @@ a {
   margin-right: 7px;
   cursor: pointer;
 }
-.social-icons-team .social-icon-team:hover{
-  color:black;
-  background-color: white  ;
+.social-icons-team .social-icon-team:hover {
+  color: black;
+  background-color: white;
 }
 
 .team-card:hover {
@@ -250,28 +254,25 @@ a {
     );
   }
 
-  .social-icons-team{
+  .social-icons-team {
     top: 50%;
     z-index: 1;
   }
-
 }
 /* team-section */
 
 /* Reviews */
-#reviews-cards,#footer-div{
-  background:linear-gradient(
-    rgb(8,32,50,0.8),
-    rgb(8,32,50,0.8)
-  ),url(assets/images/bg_banner1.jpg);
+#reviews-cards,
+#footer-div {
+  background: linear-gradient(rgb(8, 32, 50, 0.8), rgb(8, 32, 50, 0.8)),
+    url(assets/images/bg_banner1.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
-  
 }
 
-.stars .bx{
-  color: #f02900; 
+.stars .bx {
+  color: #f02900;
 }
 /* Reviews */
 
@@ -282,29 +283,58 @@ a {
 }
 
 /* BLOG */
-.blog-card{
+.blog-card {
   position: relative;
 }
-.label-badge{
-position: absolute;
-top: 6%;
-left: 11%;
-padding: 0.3rem 0.8rem;
+.label-badge {
+  position: absolute;
+  top: 6%;
+  left: 11%;
+  padding: 0.3rem 0.8rem;
 }
 
 /* Footer */
-.footer-para{
+.footer-para {
   color: rgba(255, 255, 255, 0.678);
   font-size: 0.9rem;
 }
 
-
-.footer-social-icon:hover{
+.footer-social-icon:hover {
   color: #f02900;
   background-color: white;
 }
-.footer-border-top{
-  border-top: 1px  solid rgba(128, 128, 128, 0.5);
+.footer-border-top {
+  border-top: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 /* Footer */
+
+/* contact-modal  */
+.contact-img {
+  height: 600px;
+  background-position: center;
+}
+
+@media (max-width: 992px) {
+  .contact-img {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+.contact-text {
+  color: rgb(81, 97, 113);
+}
+.contact-text input,
+.contact-text textarea {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 7px;
+}
+
+
+/* contact-modal  */
