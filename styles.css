@@ -66,6 +66,7 @@ a {
   font-weight: 400;
   text-decoration: none;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 .contact-btn:hover {
   background-color: #f02900;
@@ -88,6 +89,14 @@ a {
   background-position: center;
   background-size: cover;
   position: relative;
+}
+@media (max-width:500px) {
+  .hero{
+  background-position: right ;
+  }
+  .hero-2{
+  background-position: left ;
+  }
 }
 .transp-btn {
   background-color: transparent;
@@ -338,3 +347,26 @@ a {
 
 
 /* contact-modal  */
+/* Close btn code */
+.close-btn-parent{
+position: relative;
+}
+.close-btn{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.spiner {
+  background: rgb(255,83,53);
+  background-image: url(assets/images/spinner.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+}

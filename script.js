@@ -63,3 +63,20 @@
 
 
   
+        let closebtn=document.querySelector(".close-btn");
+        let closebtnparent=document.querySelector(".close-btn-parent");
+        closebtn.addEventListener("click",()=>{
+            
+        })
+
+
+        // spinner
+let spinner =document.querySelector(".spiner");
+            window.addEventListener('load', ()=> {
+              
+                if (spinner) {   
+                spinner.style.display = 'none';
+              }
+
+  
+});
